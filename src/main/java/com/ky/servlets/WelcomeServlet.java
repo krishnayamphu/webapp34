@@ -16,8 +16,9 @@ public class WelcomeServlet extends HttpServlet {
             String user= (String) session.getAttribute("user");
             if(user==null){
                 response.sendRedirect("login");
+            }else{
+                request.getRequestDispatcher("welcome.jsp").forward(request,response);
             }
-            request.getRequestDispatcher("welcome.jsp").forward(request,response);
         }
 
     }
