@@ -20,7 +20,6 @@ public class WelcomeServlet extends HttpServlet {
                 request.getRequestDispatcher("welcome.jsp").forward(request,response);
             }
         }
-
     }
 
     @Override
