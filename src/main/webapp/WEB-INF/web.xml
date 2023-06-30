@@ -1,0 +1,36 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>config</servlet-name>
+        <jsp-file>/jsp/config.jsp</jsp-file>
+        <init-param>
+            <param-name>cname</param-name>
+            <param-value>Aptech Computer Education</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.ky.servlets.TestServlet</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>MyPageServlet</servlet-name>
+    <servlet-class>com.ky.servlets.MyPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+        <servlet-name>config</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyPageServlet</servlet-name>
+        <url-pattern>/mypage</url-pattern>
+    </servlet-mapping>
+</web-app>

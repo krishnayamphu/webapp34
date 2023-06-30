@@ -1,0 +1,23 @@
+header {
+    background-color: aqua;
+    height: 100px;
+}
+
+nav {
+    background-color: orangered;
+    height: 60px;
+}
+
+main {
+    background-color: antiquewhite;
+    height: 400px;
+}
+
+footer {
+    background-color: darkred;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+}
