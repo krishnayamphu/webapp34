@@ -9,17 +9,7 @@ import java.io.IOException;
 public class WelcomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session=request.getSession(false);
-        if(session==null){
-            response.sendRedirect("login");
-        }else{
-            String user= (String) session.getAttribute("user");
-            if(user==null){
-                response.sendRedirect("login");
-            }else{
-                request.getRequestDispatcher("welcome.jsp").forward(request,response);
-            }
-        }
+        request.getRequestDispatcher("welcome.jsp").forward(request,response);
     }
 
     @Override
