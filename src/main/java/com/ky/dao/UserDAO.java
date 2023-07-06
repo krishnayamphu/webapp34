@@ -41,5 +41,19 @@ public class UserDAO {
         }
         return status;
     }
-
+    public static boolean deleteUser(int id){
+        boolean status=false;
+        String sql="DELETE FROM users WHERE id=?";
+        Connection cn= ConnectDB.connect();
+        try {
+            PreparedStatement ps=cn.prepareStatement(sql);
+            ps.setInt(1,id);
+            if(ps.executeUpdate()==1){
+                status=true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return status;
+    }
 }
