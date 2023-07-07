@@ -30,7 +30,7 @@
             <td>${user.password}</td>
             <td>${user.createdAt}</td>
             <td>
-                <a href="">Edit</a>
+                <a href="user-edit?id=${user.id}">Edit</a>
                 <form action="users" method="post">
                     <input type="hidden" value="${user.id}" name="id">
                     <button type="submit">Delete</button>
